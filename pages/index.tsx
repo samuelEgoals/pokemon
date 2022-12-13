@@ -12,7 +12,7 @@ export default function Home() {
     const [pokemon, setPokemon] = useState<PokemonType | null>(null)
 
     const searchPokemon = () => {
-        api.get(E_POKEMON.replace(":name", searchTerm)).then((res: AxiosResponse) => setPokemon(res.data)).catch()
+        api.get(E_POKEMON.replace(":name", searchTerm)).then((res: AxiosResponse) => setPokemon(res.data)).catch(() => console.log("err"))
     }
 
     return (
