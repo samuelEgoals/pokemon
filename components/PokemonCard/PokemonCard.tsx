@@ -2,7 +2,7 @@ import Image from "next/image";
 import {PokemonType, Type} from "../../types";
 import style from "./style.module.scss"
 
-const PokemonCard = ({pokemon}: {pokemon: PokemonType}) => {
+const PokemonCard = ({pokemon}: { pokemon: PokemonType }) => {
     return (
         <div className={style.card}>
             <div className={style.title}>
@@ -11,7 +11,8 @@ const PokemonCard = ({pokemon}: {pokemon: PokemonType}) => {
             <div className={style.sprite}>
                 {
                     !!pokemon?.sprites ?
-                        <Image width={100} height={100} loader={() => pokemon.sprites.front_default} src={pokemon.sprites.front_default} alt="pokemon"/>
+                        <Image width={100} height={100} loader={() => pokemon.sprites.front_default}
+                               src={pokemon.sprites.front_default} alt="pokemon"/>
                         :
                         null
                 }
@@ -27,6 +28,11 @@ const PokemonCard = ({pokemon}: {pokemon: PokemonType}) => {
                         </div>
                     )
                 })}
+            </div>
+            <div className={style.add_to_pokedex}>
+                <button>
+                    Add to Pokedex
+                </button>
             </div>
         </div>
     )

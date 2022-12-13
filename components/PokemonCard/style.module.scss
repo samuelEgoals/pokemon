@@ -27,3 +27,12 @@
   display: flex;
   justify-content: center;
 }
+
+.add_to_pokedex{
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  :hover{
+    cursor: pointer;
+  }
+}
