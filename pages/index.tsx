@@ -1,10 +1,10 @@
-import styles from '../styles/Home.module.css'
+import styles from 'styles/Home.module.css'
 import {useState} from "react";
-import {api} from "../api";
-import {E_POKEMON} from "../api/endpoints";
+import {api} from "api";
+import {E_POKEMON} from "api/endpoints";
 import {AxiosResponse} from "axios";
-import {PokemonType} from "../types";
-import {PokemonCard} from "../components";
+import {PokemonType} from "types";
+import {Pokedex, PokemonCard} from "components";
 
 export default function Home() {
 
@@ -27,6 +27,7 @@ export default function Home() {
                     :
                     null
             }
+            <Pokedex/>
         </div>
     )
 }

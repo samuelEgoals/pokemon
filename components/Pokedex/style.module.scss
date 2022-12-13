@@ -1,0 +1,87 @@
+$buttonSize: 100px;
+$pokedexSize: 450px;
+
+.wrapper {
+  &_closed {
+    position: fixed;
+    bottom: calc(-1 * ($buttonSize / 2));
+    width: 100%;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    transition: bottom 1s;
+  }
+
+  &_opened {
+    position: fixed;
+    bottom: calc((-1 * ($buttonSize / 2)) + $pokedexSize);
+    width: 100%;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    transition: bottom 1s;
+  }
+}
+
+.pokedex {
+  &_button {
+    &_opened {
+      width: $buttonSize;
+      height: $buttonSize;
+      border: 1px solid black;
+      border-radius: 50%;
+      background-color: white;
+      z-index: 3;
+
+      :hover {
+        cursor: pointer;
+      }
+    }
+
+    &_closed {
+      width: $buttonSize;
+      height: $buttonSize;
+      border: 1px solid black;
+      border-radius: 50%;
+      background-color: white;
+      z-index: 3;
+
+      :hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &_text {
+    &_opened {
+      display: flex;
+      height: calc($buttonSize / 1.1);
+      user-select: none;
+      justify-content: center;
+      align-items: center;
+      transition: height 1s;
+      //padding-bottom: 5px;
+    }
+
+    &_closed {
+      display: flex;
+      height: calc($buttonSize / 1.5);
+      user-select: none;
+      justify-content: center;
+      align-items: center;
+      transition: height 1s;
+    }
+  }
+
+}
+
+.pokemon_cards {
+  position: absolute;
+  width: 100%;
+  border-top: 1px solid black;
+  top: calc($buttonSize / 2);
+
+  &_closed {
+
+  }
+}
