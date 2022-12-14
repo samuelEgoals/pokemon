@@ -1,0 +1,16 @@
+.search{
+  &_bar{
+    padding: 10px;
+    border-radius: 5px 0 0 5px;
+    border: none;
+  }
+
+  &_button{
+    padding: 10px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    &:hover{
+      cursor: pointer;
+    }
+  }
+}

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import {PokemonType, Type} from "../../types";
+import {PokemonType, Type} from "../../../types";
 import style from "./style.module.scss"
 import {Dispatch} from "react";
 
@@ -33,13 +33,27 @@ const PokemonCard = ({
                 {`Base xp: ${pokemon.base_experience}`}
             </div>
             <div className={style.types}>
-                {pokemon.types.map((type: Type, index: number) => {
+                {pokemon.types?.map((type: Type, index: number) => {
                     return (
                         <div key={index}>
                             {`Type: ${type.type.name}`}
                         </div>
                     )
                 })}
+            </div>
+            <div className={style.abilities}>
+                <div>
+                <div className={style.abilities_title}>
+                    Abilities:
+                </div>
+                    {pokemon.abilities.map((ability, index: number) => {
+                        return (
+                            <div key={index} className={style.abilities_name}>
+                                {ability.ability.name}
+                            </div>
+                        )
+                    })}
+                </div>
             </div>
             <div className={style.add_to_pokedex}>
                 {

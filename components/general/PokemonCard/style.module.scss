@@ -4,6 +4,7 @@
   border: 1px solid black;
   border-radius: 15px;
   padding-bottom: 20px;
+  background-color: white;
 }
 
 .title{
@@ -34,5 +35,20 @@
   padding-top: 10px;
   :hover{
     cursor: pointer;
+  }
+}
+
+.abilities{
+  display: flex;
+  justify-content: center;
+  &_title{
+    display: flex;
+    justify-content: center;
+    color: #ff00ff;
+  }
+
+  &_name{
+    display: flex;
+    justify-content: center;
   }
 }
