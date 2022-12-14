@@ -17,17 +17,21 @@ export default function Home() {
     }
 
     return (
-        <div className={styles.container}>
-            <input onChange={(e) => setSearchTerm(e.target.value)}/>
-            <button onClick={() => searchPokemon()}>
-                Search
-            </button>
-            {
-                pokemon ?
-                    <PokemonCard pokemon={pokemon} pokedex={pokedex} setPokedex={setPokemondex}/>
-                    :
-                    null
-            }
+        <div className={styles.wrapper}>
+            <div className={styles.search}>
+                <input onChange={(e) => setSearchTerm(e.target.value)}/>
+                <button onClick={() => searchPokemon()}>
+                    Search
+                </button>
+                <div className={styles.card}>
+                    {
+                        pokemon ?
+                            <PokemonCard pokemon={pokemon} pokedex={pokedex} setPokedex={setPokemondex}/>
+                            :
+                            null
+                    }
+                </div>
+            </div>
             <Pokedex pokedex={pokedex}/>
         </div>
     )

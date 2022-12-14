@@ -1,5 +1,5 @@
 import Image from "next/image";
-import {PokemonType, Type} from "../../types";
+import {PokemonType, Type} from "../../../types";
 import style from "./style.module.scss"
 import {Dispatch} from "react";
 

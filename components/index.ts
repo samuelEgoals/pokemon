@@ -1,2 +1,2 @@
-export * from "./PokemonCard"
-export * from "./Pokedex"
+export * from "./general"
+export * from "./general"
