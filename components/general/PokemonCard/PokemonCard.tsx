@@ -43,9 +43,9 @@ const PokemonCard = ({
             </div>
             <div className={style.abilities}>
                 <div>
-                <div className={style.abilities_title}>
-                    Abilities:
-                </div>
+                    <div className={style.abilities_title}>
+                        Abilities:
+                    </div>
                     {pokemon.abilities.map((ability, index: number) => {
                         return (
                             <div key={index} className={style.abilities_name}>

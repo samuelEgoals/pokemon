@@ -25,6 +25,7 @@ const Pokedex = ({pokedex}: { pokedex: PokemonType[] }) => {
     const wrapperClass = useMemo(() => !open ? "wrapper_closed" : "wrapper_opened", [open])
     const pokedexClass = useMemo(() => !open ? "pokedex_button_closed" : "pokedex_button_opened", [open])
     const textClass = useMemo(() => !open ? "pokedex_text_closed" : "pokedex_text_opened", [open])
+    //The sum of all the pokemon's in the pokedex base_xp
     const collectiveBaseXp = useMemo(() => {
         let value = 0;
         pokedex.forEach((pokemon: PokemonType) => {

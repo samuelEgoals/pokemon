@@ -41,10 +41,8 @@
 .abilities{
   display: flex;
   justify-content: center;
-  //max-height: 65px;
   overflow-y: hidden;
   white-space: nowrap;
-  //overflow: hidden;
   &_title{
     display: flex;
     justify-content: center;

@@ -25,9 +25,15 @@ export default function Home() {
     const [pokemonList, setpokemonList] = useState<PokemonType[] | null>(null)
     const [pokedex, setPokemondex] = useState([])
 
+    /**
+     * When the form is submitted this function will create a list of Pokemon names that contain the inserted phrase.
+     * A new list of promises will be generated using the list name. After all the promises are resolved the data
+     * attribute is extracted and returned in an array.
+     * @param data
+     */
     const searchPokemon: SubmitHandler<FieldValues> = (data: any) => {
         async function fetchData() {
-            const test = new RegExp(`^.*${data.name}.*$`)
+            const test = new RegExp(`^.*${data.name.toLowerCase()}.*$`)
             const promiseList: any = []
             const answers: any = []
             pokemonNames.forEach((e: string) => test.test(e) ? answers.push(e) : null)
@@ -42,6 +48,7 @@ export default function Home() {
             })
         }
 
+        // The minimum length for the phrase to be searched is 3
         if (data.name.length >= 3) {
             fetchData().then((res: any) => setpokemonList(res))
         }
