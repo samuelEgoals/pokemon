@@ -2,7 +2,7 @@ import styles from 'styles/Home.module.css'
 import {useState} from "react";
 import {api} from "api";
 import {E_POKEMON} from "api/endpoints";
-import {PokemonType} from "types";
+import {PokemonType} from "types/pokemon-types";
 import {Pokedex, PokemonCard, SearchBar} from "components";
 import {FieldValues, SubmitHandler} from "react-hook-form";
 import {pokemonNames} from "../components/pokemon-names";
