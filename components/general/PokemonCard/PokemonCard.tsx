@@ -33,7 +33,7 @@ const PokemonCard = ({
                 {`Base xp: ${pokemon.base_experience}`}
             </div>
             <div className={style.types}>
-                {pokemon.types.map((type: Type, index: number) => {
+                {pokemon.types?.map((type: Type, index: number) => {
                     return (
                         <div key={index}>
                             {`Type: ${type.type.name}`}

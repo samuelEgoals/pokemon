@@ -3,22 +3,23 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
-  /*justify-content: center;*/
   align-items: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url("/background.jpg");
+  background-image: url("/background-3.jpg");
 }
 
 .search{
   display: block;
-  /*background-color: red;*/
+  width: 100%;
   margin-top: 50px;
 }
 
 .card{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-row-gap: 10px;
   width: 100%;
-  display: flex;
   justify-content: center;
   margin-top: 20px;
 }
