@@ -1,0 +1,56 @@
+.card{
+  width: 200px;
+  height: auto;
+  border: 1px solid black;
+  border-radius: 15px;
+  padding-bottom: 20px;
+  background-color: white;
+}
+
+.title{
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  color: blue;
+}
+
+.sprite{
+  display: flex;
+  justify-content: center;
+}
+
+.base_exp{
+  display: flex;
+  justify-content: center;
+}
+
+.types{
+  display: flex;
+  justify-content: center;
+}
+
+.add_to_pokedex{
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  :hover{
+    cursor: pointer;
+  }
+}
+
+.abilities{
+  display: flex;
+  justify-content: center;
+  overflow-y: hidden;
+  white-space: nowrap;
+  &_title{
+    display: flex;
+    justify-content: center;
+    color: #ff00ff;
+  }
+
+  &_name{
+    display: flex;
+    justify-content: center;
+  }
+}
