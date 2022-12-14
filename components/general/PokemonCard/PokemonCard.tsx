@@ -41,6 +41,20 @@ const PokemonCard = ({
                     )
                 })}
             </div>
+            <div className={style.abilities}>
+                <div>
+                <div className={style.abilities_title}>
+                    Abilities:
+                </div>
+                    {pokemon.abilities.map((ability, index: number) => {
+                        return (
+                            <div key={index} className={style.abilities_name}>
+                                {ability.ability.name}
+                            </div>
+                        )
+                    })}
+                </div>
+            </div>
             <div className={style.add_to_pokedex}>
                 {
                     !!setPokedex ?
