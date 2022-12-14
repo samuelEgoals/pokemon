@@ -1,8 +1,20 @@
 import Image from "next/image";
 import {PokemonType, Type} from "../../types";
 import style from "./style.module.scss"
+import {Dispatch} from "react";
 
-const PokemonCard = ({pokemon}: { pokemon: PokemonType }) => {
+const PokemonCard = ({
+                         pokemon,
+                         pokedex,
+                         setPokedex = null
+                     }: { pokemon: PokemonType, pokedex?: PokemonType[], setPokedex?: Dispatch<any> | null }) => {
+
+    const addToPokedex = () => {
+        if ((!pokedex?.find(e => e.id === pokemon.id)) && !!setPokedex) {
+            setPokedex((current: PokemonType[]) => current.length < 10 ? [...current, pokemon] : [pokemon, ...current].splice(0, 10))
+        }
+    }
+
     return (
         <div className={style.card}>
             <div className={style.title}>
@@ -30,9 +42,13 @@ const PokemonCard = ({pokemon}: { pokemon: PokemonType }) => {
                 })}
             </div>
             <div className={style.add_to_pokedex}>
-                <button>
-                    Add to Pokedex
-                </button>
+                {
+                    !!setPokedex ?
+                        <button onClick={() => addToPokedex()}>
+                            Add to Pokedex
+                        </button>
+                        : null
+                }
             </div>
         </div>
     )
