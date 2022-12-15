@@ -8,6 +8,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url("/background-3.jpg");
+  background-position: center;
 }
 
 .search{
@@ -23,4 +24,10 @@
   width: 100%;
   justify-content: center;
   margin-top: 20px;
+}
+
+.center{
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }

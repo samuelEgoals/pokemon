@@ -3,9 +3,8 @@ import {useState} from "react";
 import {api} from "api";
 import {E_POKEMON} from "api/endpoints";
 import {PokemonType} from "types/pokemon-types";
-import {Pokedex, PokemonCard, SearchBar} from "components";
+import {Pokedex, PokemonCard, SearchBar, pokemonNames} from "components";
 import {FieldValues, SubmitHandler} from "react-hook-form";
-import {pokemonNames} from "../components/pokemon-names";
 
 function PokemonList(props: { pokemonList: PokemonType[] | null, callbackfn: (pokemon: PokemonType, index: number) => JSX.Element }) {
     return <>
@@ -62,8 +61,10 @@ export default function Home() {
                 <div className={styles.card}>
                     <PokemonList pokemonList={pokemonList} callbackfn={(pokemon: PokemonType, index: number) => {
                         return (
-                            <PokemonCard pokemon={pokemon} pokedex={pokedex} key={index}
-                                         setPokedex={setPokemondex}/>
+                            <div className={styles.center}>
+                                <PokemonCard pokemon={pokemon} pokedex={pokedex} key={index}
+                                             setPokedex={setPokemondex}/>
+                            </div>
                         )
                     }}/>
                 </div>
