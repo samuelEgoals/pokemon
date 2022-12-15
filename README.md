@@ -4,6 +4,10 @@ This is a next js project that allows the user to search for a pokemon by provid
 
 You can save up to 10 pokemons to your pokemon deck. When a 11th pokemon is added to the pokemon deck the first pokemon that was inserted will be replaced by the new pokemon.
 
+In order to view your saved pokemon cards you have to click the small semi-circle at the center-bottom of the page.
+
+That will open a a window where you can view your pokemon and their meta data.
+
 ## Clone the repo
 
 1. Clone the repo `git clone https://github.com/samuelEgoals/pokemon.git` to your directory of choice.
